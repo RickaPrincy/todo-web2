@@ -1,11 +1,12 @@
 import Todo, { TodoType } from "./Todo";
 
 type TodoTableProps = {
-    list: TodoType[]
+    list: TodoType[],
+    removeTodo: (id:string)=>void
 }
 
 function TodoTable(props: TodoTableProps) {
-    const { list } = props;
+    const { list, removeTodo } = props;
 
     return (
         <table className="w-100 mt-5">
@@ -23,7 +24,7 @@ function TodoTable(props: TodoTableProps) {
             </thead>
             <tbody>
                 {list.map(el => {
-                    return <Todo key={el.id} todo={el} />
+                    return <Todo key={el.id} todo={el} removeTodo={removeTodo}/>
                 })}
             </tbody>
         </table>
