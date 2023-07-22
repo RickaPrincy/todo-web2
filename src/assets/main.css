@@ -5,6 +5,7 @@
 .box-modif{
     box-shadow: 0px 0px 15px gray;
     border-radius: 15px;
+    background-color: white;
 }
 
 .font-20{
@@ -35,4 +36,18 @@ th,td,tr{
     border: 1px solid rgb(78, 78, 78);
     padding: 7px;
     text-align: center;
+}
+
+.popup{
+    top:0;
+    left:0;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.623);
+    backdrop-filter: blur(4px);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
